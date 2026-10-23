@@ -71,7 +71,7 @@ def scrape_url(url: str) -> str:
         if not content:
             return f"Could not extract readable content from: {url}"
 
-        return content
+        return content[:5000]
 
     except Exception as e:
         return f"Error scraping URL: {e}"
